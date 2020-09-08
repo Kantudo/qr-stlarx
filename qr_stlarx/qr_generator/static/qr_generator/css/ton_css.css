@@ -1,0 +1,47 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+}
+
+#logtext {
+  text-align: right;
+}
+
+body {
+  background: #eceffc;
+  height: 100%;
+  color: rgb(100, 108, 127);
+  line-height: 1.4rem;
+  font-family: Roboto, "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+.btn {
+	--btn-padding: 2px 5px;
+	--btn-border-width: 0px;
+	--btn-radius: 2px;
+}
+
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divcentrar {
+  /* background-color: #AFDC00; */
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}

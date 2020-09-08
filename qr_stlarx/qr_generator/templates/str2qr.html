@@ -1,0 +1,28 @@
+
+{% load static %}
+{% load sass_tags %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static "qr_generator/css/custom_input_form.css" %}">
+
+<div class="">
+    <form autocomplete="off" action="" method="post" class="inp" id="str2encode_form">
+        {% csrf_token %}
+
+        <div class="input-field">
+            {{ form.str2encode }}
+            <label for="str2encode">Str2Encode</label>
+        </div>
+        <span class="focus-bg"></span>
+    </form>
+</div>
+
+<!-- Scripts -->
+<!-- Async img loading (DropZone) -->
+<script>
+    var urls = ["{% static "qr_generator/js/async_img.js" %}"];
+    for(let i = 0; i < urls.length; i++){
+        console.log(urls[i]);
+        $.getScript(urls[i]);
+    }
+</script>

@@ -1,0 +1,39 @@
+/* label color */
+.input-field label {
+    color: #fff !important;
+}
+/* label focus color */
+/* .input-field input[type=text]:focus + label { */
+/*     color: #90caf9 !important; /\* blue ligthen-3 *\/ */
+/* } */
+/* label underline focus color */
+.input-field input:not(.valid) {
+    border-bottom: 1px solid #fff ; /* white */
+    box-shadow: 0 1px 0 0 #fff ; /* blue lighten-1 */
+}
+.input-field input:not(.invalid) {
+    border-bottom: 1px solid #fff ; /* white */
+    box-shadow: 0 1px 0 0 #fff ; /* blue lighten-1 */
+}
+/* .input-field input:not(.invalid) { */
+/*     border-bottom: 1px solid #fff !important ; /\* white *\/ */
+/*     box-shadow: 0 1px 0 0 #fff ; /\* blue lighten-1 *\/ */
+/* } */
+/* valid color */
+.input-field input.valid {
+    color: #fff !important;
+    /* border-bottom: 1px solid #000; */
+    /* box-shadow: 0 1px 0 0 #000; */
+}
+.input-field input{
+    color: #fff;
+}
+/* invalid color */
+/* .input-field input[type=text].invalid { */
+/*     border-bottom: 1px solid #000; */
+/*     box-shadow: 0 1px 0 0 #000; */
+/* } */
+/* icon prefix focus color */
+/* .input-field .prefix.active { */
+/*     color: #000; */
+/* } */

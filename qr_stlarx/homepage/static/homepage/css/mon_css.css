@@ -1,0 +1,45 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  max-width: 300px;
+}
+
+.resize_qr {
+  padding-left: 10vw;
+  /* margin-right: auto; */
+  width: 60vw;
+  max-width: 600px;
+}
+
+#logtext {
+  text-align: right;
+}
+
+body {
+  background: #eceffc;
+  height: 100%;
+  color: rgb(100, 108, 127);
+  line-height: 1.4rem;
+  font-family: Roboto, "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+.btn {
+	--btn-padding: 2px 5px;
+	--btn-border-width: 0px;
+	--btn-radius: 2px;
+}
+
+.divcentrar {
+  /* background-color: #AFDC00; */
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}

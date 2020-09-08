@@ -1,0 +1,38 @@
+{% load static %}
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="{% static "qr_generator/css/dropzone.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "qr_generator/css/mon_dropzone.css" %}">
+
+
+<div class="">
+    <div id="dropzone" class="" >
+        <form action="{% url 'pdf2qr' %}" class="dropzone needsclick dz-clickable" id="mon-dropzone">
+            {% csrf_token %}
+            <div class="dz-message needsclick">
+                <button type="button" class="dz-button">Drag and drop or click to upload.</button><br>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<!-- Drag and drop JS (DropZone) -->
+<script>
+    var dropzone = "{% static "qr_generator/js/dropzone.js" %}";
+    function load_dz_dependent(){
+            var str2pdf_onsuccess = "{% static "qr_generator/js/dropzone_async_img.js" %}";
+            $.getScript(str2pdf_onsuccess).done(function(script, textStatus){
+                if (Dropzone.instances.length == 0 ){
+                    Dropzone.discover(); // Catch random error
+                }
+            });
+    }
+    $.getScript(dropzone)
+        .done(function(script, textStatus){
+            load_dz_dependent();
+        });
+    console.log('exec');
+</script>

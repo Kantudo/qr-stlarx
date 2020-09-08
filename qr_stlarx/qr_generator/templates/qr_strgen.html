@@ -1,0 +1,35 @@
+<head>
+
+{% load static %}
+{% load sass_tags %}
+
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+	<!--{% if display %}
+		<h2 id="logtext">{{ display }}</h2>
+		<a id="logtext" href="{% url 'logout' %}">logout</a>
+	{% endif %}-->
+
+
+	<div class="container h-100" >
+		<div class="row h-100 justify-content-center align-items-center" id="form-container">
+			<form autocomplete="off" action="" method="post" class="inp" id="str2encode_form">
+				{% csrf_token %}
+				{{ form }}
+				<!-- <input type="text" id="inp" placeholder="&nbsp;" value="{{ str2encode }}"> -->
+				<span class="label">String 2 encode</span>
+				<span class="focus-bg"></span>
+			</form>
+		</div>
+	</div>
+
+	<script src="{% static "qr_generator/js/async_img.js" %}"></script>
+</body>
